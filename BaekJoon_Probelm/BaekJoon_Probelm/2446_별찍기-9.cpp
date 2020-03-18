@@ -1,6 +1,9 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
+
+string strArray[101];
 
 int main() {
 	int cnt;
@@ -8,39 +11,23 @@ int main() {
 	cin >> cnt;
 
 	int line = cnt * 2 - 1;
-	int blank = 0;
 
-	for (int i = 0; i <= line; i++) {
-		if (i < cnt) {
-			for (int j = 0; j < blank; j++) {
-				cout << ' ';
-			}
-			for (int j = 0; j < line - blank * 2; j++) {
-				cout << '*';
-			}
-			for (int j = 0; j < blank; j++) {
-				cout << ' ';
-			}
-			blank++;
-		}
-		else if (i == cnt) {
-			blank--;
-			continue;
-		}
-		else {
-			blank--;
-			for (int j = 0; j < blank; j++) {
-				cout << ' ';
-			}
-			for (int j = 0; j < line - blank * 2; j++) {
-				cout << '*';
-			}
-			for (int j = 0; j < blank; j++) {
-				cout << ' ';
-			}
-		}
-		if (i < line)
-			cout << endl;
+	string str = "";
+
+	for (int i = 0; i < line; i++) str += '*';
+
+	strArray[0] = str;
+
+	for (int i = 0; i < line / 2; i++) {
+		str[i] = ' ';
+		str[line - i - 1] = NULL;
+		strArray[i + 1] = str;
+	}
+
+	for (int i = 0; i < line / 2; i++) cout << strArray[i] << endl;
+	for (int i = line / 2; i > -1; i--) {
+		cout << strArray[i];
+		if (i != 0) cout << endl;
 	}
 
 	return 0;
