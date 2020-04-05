@@ -33,5 +33,5 @@ int main() {
 	return 0;
 }
 
-// https://www.acmicpc.net/problem/2446
-// 걸린 시간 : 
+// 문     제 : https://www.acmicpc.net/problem/2446
+// 실패

@@ -24,5 +24,5 @@ int main() {
 	return 0;
 }
 
-// https://www.acmicpc.net/problem/2523
+// 문     제 : https://www.acmicpc.net/problem/2523
 // 걸린 시간 : 8 ms

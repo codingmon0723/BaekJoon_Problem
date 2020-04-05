@@ -16,6 +16,6 @@ int main() {
 	return 0;
 }
 
-// https://www.acmicpc.net/problem/5543
+// 문     제 : https://www.acmicpc.net/problem/5543
 // 주     의 : 백준은 main을 int로 해야한다.
 // 걸린 시간 : 0ms
